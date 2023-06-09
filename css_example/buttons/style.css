@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+::before, ::after {
+    box-sizing: border-box;
+}
+/* .u- */
+.u-icon-arrowthin {
+    width: 45px;
+    height: 6px;
+    background: url(img/bg_more_arrow_gray.png) no-repeat center / contain;
+}
+
+.u-icon-arrow {
+    width: 15px;
+    height: 18px;
+    background-color: currentColor;
+    -webkit-mask-image: url(img/icon_arrow_white.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+}
+
+.u-icon-arrowbold {
+    border-width: 8px 0 8px 15px;
+    border-color: transparent transparent transparent currentColor;
+    border-style: solid;
+    width: 0;
+    height: 0;
+}
+/* BUTTON MORE */
+.c-btnmore {
+    padding: 0 80px 0 0;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+.c-btnmore__arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;                                                         
+}
+.c-btnmore:hover .c-btnmore__arrow {
+    right: 0;
+}
+
+/* BUTTON SKEW */
+.c-btnskew {
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    min-height: 80px;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    justify-content: center;
+    transition: all  0.3s;
+
+}
+.c-btnskew:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-bottom: 80px solid #ef8033;
+    border-right: 20px solid white;
+    border-right: 20px solid transparent;
+    z-index: -1;
+    border-top-right-radius: 28px 80px;
+}
+.c-btnskew:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    border-bottom: 80px solid #fff;
+    border-right: 20px solid white;
+    border-right: 20px solid transparent;
+    z-index: -1;
+    border-top-right-radius: 26px 70px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.c-btnskew:hover:after {
+    opacity: 1;
+}
+.c-btnskew:hover {
+    color: #ef8033
+}
+
+/* ANIMATION FOR BACKGROUND OF BUTTON */
+.c-btn02 {
+    display: inline-flex;
+    min-height: 70px;
+    width: 100%;
+    max-width: 400px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    color: #003da6;
+    border: 1px solid currentColor;
+    background-color: currentColor;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.c-btn02::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0px;
+    right: 0;
+    left: auto;
+    background-color: #fff;
+    transition: width 0.3s;
+    z-index: -1;
+}
+.c-btn02__inner {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+.c-btn02__icon {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.c-btn02:hover::before {
+    left: 0;
+    width: 100%;
+}
+.c-btn02:hover .c-btn02__inner {
+    color: #003da6;
+}
+
+/* BACKGROUND LINEAR OF BUTTON */
+.c-btn03 {
+    display: inline-flex;
+    width: 100%;
+    max-width: 600px;
+    min-height: 96px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 999px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(90deg, #bf9224 0%, #d2761c 20%, #e5bd54 24%, #ce6d20 28%, #efaf00 45%, #d0721e 80%, #e0ca82 83%, #dbb400 93%, #caa846 100%);
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.c-btn03::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    border: 8px solid #000045;
+    background: linear-gradient(#0000ce, #000166);
+    border-radius: 999px;
+    z-index: -1;
+}
+.c-btn03__content {
+    position: relative;
+    padding: 0 30px;
+}
+.c-btn03__arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
