@@ -190,3 +190,99 @@
     transform: translateY(-50%);
     
 }
+/* ANIMATION BUTTON WHEN HOVER */
+
+.c-btn04 {
+    background: #ef8033;
+    border-radius: 10px;
+    width: 200px;
+    padding: 14px 20px;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+.c-btn04:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    padding-top: 200%;
+    padding-left: 200%;
+    background: #ccc;
+    transition: all 0.8s;
+    display: block;
+    left: 0;
+    bottom: 0;
+}
+.c-btn04:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.c-btn05 {
+    background: #ef8033;
+    border-radius: 10px;
+    width: 200px;
+    padding: 14px 20px;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 9px #ccc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+.c-btn05:active {
+    box-shadow: 0 5px #ccc;
+    transform: translateY(4px);
+}
+
+.c-btn06 {
+    background: #ef8033;
+    border-radius: 10px;
+    width: 200px;
+    padding: 14px 20px;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+.c-btn06__inner {
+    position: relative;
+    transition: all 0.5s;
+}
+.c-btn06__inner::after {
+    content: '\00bb';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.c-btn06:hover span {
+    padding-right: 25px;
+}
+
+.c-btn06:hover .c-btn06__inner::after {
+    opacity: 1;
+    right: 0;
+}

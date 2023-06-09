@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.c-table01 {
+    width: 80%;
+    margin: 20px auto;
+    border-spacing: 0px;
+}
+.c-table01 th, .c-table01 td {
+    border-color: red;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    padding: 10px;
+}
+.c-table01 tr:first-child > * {
+    border-top-width: 1px;
+}
+.c-table01 tr > *:first-child {
+    border-left-width: 1px;
+}
+
+.c-table01 tr:first-child > *:first-child {
+    border-top-left-radius: 20px;
+}
+.c-table01 tr:first-child > *:last-child {
+    border-top-right-radius: 20px;
+}
+.c-table01 tr:last-child > *:first-child {
+    border-bottom-left-radius: 20px;
+}
+.c-table01 tr:last-child > *:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+/*  */
+/* border-style:hidden 
+In the case of table cell and border collapsing, the hidden value has the highest priority: if any other conflicting border is set, it won't be displayed. */
+.c-table02 {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 20px;
+    border-style: hidden;
+    box-shadow: inset 0 0 0 1px red;
+    /* outline: 1px solid red;
+    outline-offset: -1px; */
+}
+.c-table02 th, .c-table02 td {
+    border: 1px solid red;
+    padding: 10px;
+}

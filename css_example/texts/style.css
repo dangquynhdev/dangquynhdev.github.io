@@ -1,0 +1,80 @@
+body {
+    background: #eee;
+}
+.c-textstroke {
+    color: #1eaee0;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: white 2px 0px 0px, white 1.75517px 0.95885px 0px, white 1.0806px 1.68294px 0px, white 0.14147px 1.99499px 0px, white -0.83229px 1.81859px 0px, white -1.60229px 1.19694px 0px, white -1.97998px 0.28224px 0px, white -1.87291px -0.70157px 0px, white -1.30729px -1.5136px 0px, white -0.42159px -1.95506px 0px, white 0.56732px -1.91785px 0px, white 1.41734px -1.41108px 0px, white 1.92034px -0.55883px 0px;
+}
+/*  */
+.c-text-skewside {
+    text-align: center;
+}
+.c-text-skewside__inner {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    margin: 0 8px;
+}
+.c-text-skewside__inner::before, .c-text-skewside__inner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: -5px;
+    transform-origin: center bottom;
+    width: 2px;
+    background-color: yellow;
+}
+.c-text-skewside__inner::before {
+    left: 0;
+    transform: rotate(-12deg);
+}
+.c-text-skewside__inner::after {
+    right: 0px;
+    transform: rotate(12deg);
+}
+
+/*  */
+.c-text-fade {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1eaee0;
+}
+.c-text-fade span {
+    display: inline-block;
+    opacity: 0;
+    transition: all 1s 0.5s;
+}
+.c-text-fade span:nth-child(odd) {
+    /* animation: textfadeup 1s; */
+    transform: translateY(15px);
+}
+.c-text-fade span:nth-child(even) {
+    /* animation: textfadedown 1s; */
+    transform: translateY(-15px);
+}
+body.is-loaded .c-text-fade span {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* @keyframes textfadedown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+
+    } to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes textfadeup {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+
+    } to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+} */
