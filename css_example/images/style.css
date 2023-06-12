@@ -1,0 +1,16 @@
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.u-margincenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.u-thumbnail {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
