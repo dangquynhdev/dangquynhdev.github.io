@@ -73,3 +73,33 @@ body {
     bottom: -22px;
     /* background: url(img/bg01.png) no-repeat top center / 100% 100%; */
 }
+
+
+.u-wave01::before, .u-wave01::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: red;
+    /* bởi vì gơn sóng ít nên set 100% vw */
+    /* nếu như chạy sủ dụng using either file:// or C:/ sẽ xảy ra lỗi:   Cross origin requests are only supported for protocol schemes: http, data, isolated-app, chrome-extension, chrome, https, chrome-untrusted.*/
+    mask-image: url(img/bg01.png);
+    -webkit-mask-image: url(img/bg01.png);
+    mask-size: 100% auto;
+    -webkit-mask-size: 100% auto;
+   
+}
+.u-wave01::before {
+    top: -40px;
+    transform: rotate(180deg);
+    mask-position: top center;
+    -webkit-mask-position: top center;
+    /* background: url(img/bg01.png) no-repeat top center / 100% 100%; */
+}
+.u-wave01::after {
+    bottom: -40px;
+    mask-position: bottom center;
+    -webkit-mask-position: bottom center;
+    /* background: url(img/bg01.png) no-repeat top center / 100% 100%; */
+}
