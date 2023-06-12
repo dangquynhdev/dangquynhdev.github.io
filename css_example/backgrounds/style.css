@@ -88,6 +88,8 @@ body {
     -webkit-mask-image: url(img/bg01.png);
     mask-size: 100% auto;
     -webkit-mask-size: 100% auto;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
    
 }
 .u-wave01::before {
