@@ -1,8 +1,75 @@
+html {
+    overflow-x: hidden;
+}
+body {
+    background-color: #eee;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*  */
 .c-text-background {
     /* background: linear-gradient(yellow, yellow) repeat-x left bottom / 100% 6px; */
     box-shadow: inset 0 -9px yellow, 0 2px yellow;
     display: inline;
     font-weight: 700;
     line-height: 1.8;
+}
 
+/*  */
+.l-header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background: #fff;
+}
+.l-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-width: 1920px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    background: url(img/bg_header.png) no-repeat center top / 100% 100%;
+    bottom: -20px; 
+    /* đoạn gơn sóng vượt ra ngoài header để khi nó có thể đè lên background mỗi section phía dưới header */
+}
+
+
+/*  */
+.p-box01 {
+    position: relative;
+    min-height: 100px;
+    background-color: red;
+}
+
+/*  */
+.u-wave01::before, .u-wave01::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: red;
+    /* bởi vì gơn sóng ít nên set 100% vw */
+    /* nếu như chạy sủ dụng using either file:// or C:/ sẽ xảy ra lỗi:   Cross origin requests are only supported for protocol schemes: http, data, isolated-app, chrome-extension, chrome, https, chrome-untrusted.*/
+    mask-image: url(img/bg01.png);
+    -webkit-mask-image: url(img/bg01.png);
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    mask-position: top center;
+    -webkit-mask-position: top center;
+}
+.u-wave01::before {
+    top: -22px;
+    transform: rotate(180deg);
+    /* background: url(img/bg01.png) no-repeat top center / 100% 100%; */
+}
+.u-wave01::after {
+    bottom: -22px;
+    /* background: url(img/bg01.png) no-repeat top center / 100% 100%; */
 }
