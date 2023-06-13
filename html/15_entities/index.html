@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Character entities are used to display reserved characters in HTML.</h1>
+    <p>
+        &entity_name;<br>
+        OR<br>
+        &#entity_number;
+    </p>
+    <p>
+        ví dụ như: &#60; &lt;<br>
+        '&lt;'.codePointAt(0) => 60
+    </p>
+    <p>
+        Advantage of using an entity name: An entity name is easy to remember.<br>
+        Disadvantage of using an entity name: Browsers may not support all entity names, but the support for entity numbers is good.
+    </p>
+    <h1>
+        Non-breaking Space: &nbsp;
+    </h1>
+    <p>
+        Two words separated by a non-breaking space will stick together (not break into a new line). This is handy when breaking the words might be disruptive.
+        Examples:<br>
+        § 10<br>
+        10 km/h<br>
+        10 PM<br>
+    </p>
+    <p>
+        10&nbsp;PM
+    </p>
+    <p>
+        The non-breaking hyphen (&#8209;) is used to define a hyphen character (‑) that does not break into a new line.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quo odit assumenda provident officiis a alias reprehenderit aliquam dolores inventore repellat a&#8209;bcdefg
+    </p>
+</body>
+</html>

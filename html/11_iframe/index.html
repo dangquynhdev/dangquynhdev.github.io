@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        iframe {
+            width: 100%;
+            height: 80vh;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>intro</h1>
+    <p>
+        An inline frame is used to embed another document within the current HTML document.
+    </p>
+    <br>
+    <h1>iframe title attribute</h1>
+    <p>
+        nên đặt title cho iframe sẽ hữu ích cho screen reader
+    </p>
+    <br>
+    <h1>Iframe - Target for a Link </h1>
+    <p>
+        bằng cách đặt attr target của link bằng giá trị attr name của iframe<br>
+        khi click link tài liệu sẽ được mở trong iframe
+    </p>
+    <br>
+    <a href="https://kenwheeler.github.io/slick/" target="frame-01">link to slick library</a><br><br>
+    <iframe src="https://placehold.co/" frameborder="0" name="frame-01"></iframe>
+    
+</body>
+</html>

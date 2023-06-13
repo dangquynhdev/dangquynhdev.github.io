@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Use Lower Case File Names</h1>
+    <p>
+        Some web servers (Apache, Unix) are case sensitive about file names: "london.jpg" cannot be accessed as "London.jpg".<br>
+        Other web servers (Microsoft, IIS) are not case sensitive: "london.jpg" can be accessed as "London.jpg".<br>
+        If you move from a case-insensitive to a case-sensitive server, even small errors will break your web!<br>
+        To avoid these problems, always use lowercase file names!
+    </p>
+    <h1>Default Filenames</h1>
+    <p>
+        When a URL does not specify a filename at the end (like "https://www.w3schools.com/"), the server just adds a default filename, such as "index.html", "index.htm", "default.html", or "default.htm".<br>
+        If your server is configured only with "index.html" as the default filename, your file must be named "index.html", and not "default.html".<br>
+        However, servers can be configured with more than one default filename; usually you can set up as many default filenames as you want.
+    </p>
+</body>
+</html>

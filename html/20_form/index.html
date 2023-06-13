@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form</h1>
+    <p>
+        An HTML form is used to collect user input
+    </p>
+    <h1>input field width</h1>
+    <p>
+        default width of an input field is 20 characters.
+    </p>
+    <h1>The Name Attribute for input</h1>
+    <p>
+        là bắt buộc, nếu bị lược bỏ thì  giá trị sẽ không được gửi
+    </p>
+    <h1>label</h1>
+    <p>
+        The &lt;label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focuses on the input element.<br>
+        The &lt;label> element also helps users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the &lt;label> element, it toggles the radio button/checkbox.<br>
+        The for attribute of the &lt;label> tag should be equal to the id attribute of the <input> element to bind them together.
+    </p>
+    
+    <h1>attr của form</h1>
+    <h2>action attr của form</h2>
+    <p>
+        action dẫn đến file xử lý form<br>
+        If the action attribute is omitted, the action is set to the current page.
+    </p>
+    <h2>target</h2>
+    <p>
+        specifies where to display the response that is received after submitting the form
+    </p>
+    <h2>method</h2>
+    <p>
+        The method attribute specifies the HTTP method to be used when submitting the form data.<br><br>
+
+        The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").<br><br>
+
+        Notes on GET:<br>
+
+        Appends the form data to the URL, in name/value pairs<br>
+        NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)<br>
+        The length of a URL is limited (2048 characters)<br>
+        Useful for form submissions where a user wants to bookmark the result<br>
+        GET is good for non-secure data, like query strings in Google<br><br>
+
+        Notes on POST:<br>
+        Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)<br>
+        POST has no size limitations, and can be used to send large amounts of data.<br>
+        Form submissions with POST cannot be bookmarked
+    </p>
+    <h1>form element</h1>
+    <h2>datalist</h2>
+    <p>
+        The &lt;datalist> element specifies a list of pre-defined options for an &lt;input> element.<br>
+        Users will see a drop-down list of the pre-defined options as they input data.<br>
+        The list attribute of the &lt;input> element, must refer to the id attribute of the &lt;datalist> element.
+    </p>
+    <h2>output</h2>
+    <p>The &lt;output> element represents the result of a calculation (like one performed by a script).</p>
+    <h2>button</h2>
+    <p>
+        Always specify the type attribute for the button element. Different browsers may use different default types for the button element.
+    </p>
+    <h1>input type</h1>
+    <p>
+        &lt;input type="submit">	Displays a submit button (for submitting the form)<br>
+        &lt;input type="button">	Displays a clickable button
+    </p>
+    <p>
+        The &lt;input type="image"> defines an image as a submit button.<br>
+        The path to the image is specified in the src attribute.
+    </p>
+    <p>
+        type hidden: <br>
+        The <input type="hidden"> defines a hidden input field (not visible to a user).<br>
+        A hidden field lets web developers include data that cannot be seen or modified by users when a form is submitted.<br>
+        A hidden field often stores what database record that needs to be updated when the form is submitted.<br>
+        Note: While the value is not displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or "View Source" functionality. Do not use hidden inputs as a form of security!
+    </p>
+    <h1>input attribute</h1>
+    <h2>readonly</h2>
+    <p>
+        A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it).<br>
+        The value of a read-only input field will be sent when submitting the form!
+    </p>
+    <h2>disabled</h2>
+    <p>
+        A disabled input field is unusable and un-clickable.<br>
+        The value of a disabled input field will not be sent when submitting the form!
+    </p>
+</body>
+</html>

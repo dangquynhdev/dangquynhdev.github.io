@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>intro</h1>
+    <p>
+        The HTML picture element allows you to display different pictures for different devices or screen sizes.
+    </p>
+    <p>
+        Always specify an img element as the last child element of the <picture> element. <br>
+        The img element is used by browsers that do not support the <picture> element, <br>
+        or if none of the source tags match.<br>
+        The browser will use the first source element with matching attribute values, and ignore any following source elements.
+    </p>
+  
+    <!-- 1. Bandwidth -->
+    <picture>
+        <source media="(max-width:739px)" srcset="https://placehold.co/739x400">
+        <img src="https://placehold.co/1920x1000" alt="img"> 
+    </picture>
+    <!-- 2. Format Support -->
+    <picture>
+        <source srcset="img_avatar.png">
+        <source srcset="img_girl.jpg">
+        <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+    </picture>
+</body>
+</html>
