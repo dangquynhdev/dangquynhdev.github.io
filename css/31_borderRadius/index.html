@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>shorthand</h1>
+    <p>
+        #example1 {<br>
+            border-radius: 2em / 5em;<br>
+        }<br>
+        /* is equivalent to:<br>
+        border-top-left-radius: 2em 5em;<br>
+        border-top-right-radius: 2em 5em;<br>
+        border-bottom-right-radius: 2em 5em;<br>
+        border-bottom-left-radius: 2em 5em; */<br>
+        
+        #example2 {<br>
+            border-radius: 2em 1em 4em / 0.5em 3em;<br>
+        }<br>
+        /* is equivalent to:<br>
+        border-top-left-radius: 2em 0.5em;<br>
+        border-top-right-radius: 1em 3em;<br>
+        border-bottom-right-radius: 4em 0.5em;<br>
+        border-bottom-left-radius: 1em 3em; */<br>
+    </p>
+</body>
+</html>

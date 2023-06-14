@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSS Counters</h1>
+    <p>
+        CSS counters are "variables"<br>
+        Counters let you adjust the appearance of content based on its placement in the document.
+    </p>
+    <p>
+        To work with CSS counters we will use the following properties:<br>
+
+        counter-reset - Creates or resets a counter<br>
+        counter-increment - Increments a counter value<br>
+        content - Inserts generated content<br>
+        counter() or counters() function - Adds the value of a counter to an element
+    </p>
+    <p>
+        body {<br>
+            counter-reset: section;<br>
+        }<br>
+        
+        h2::before {<br>
+            counter-increment: section;<br>
+            content: "Section " counter(section) ": ";<br>
+        }
+    </p>
+</body>
+</html>

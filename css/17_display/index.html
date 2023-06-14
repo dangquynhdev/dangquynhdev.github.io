@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>display default of script element</h1>
+    <p>
+        The script element uses display: none; as default. 
+    </p>
+
+    <h1>display none vs visible hidden</h1>
+    <p>
+        none: The element will be hidden, and the page will be displayed as if the element is not there<br>
+        hidden: The element will be hidden, but still affect the layout
+    </p>
+
+    <h1>display inline</h1>
+    <p>
+        Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. 
+        So, an inline element with display: block; is not allowed to have other block elements inside it.
+    </p>
+
+    <h1>inline vs inline-block</h1>
+    <p>
+        inline không set được width, height
+        inline phần lề/ đệm trên dưới không được tôn trọng
+    </p>
+    
+    <h1>inline-block vs block</h1>
+    <p>
+        inline-block không thêm một ngắt dòng sau phần tử
+    </p>
+    
+    <h1>inline</h1>
+    <p>
+        không tác dụng: width, heigth, margin<br>
+        overlap: padding<br>
+    </p>
+
+    <h1>inline-block</h1>
+    <p>
+        không ngắt dòng
+    </p>
+
+    <h1>block</h1>
+    <h1>style inline, inline-block</h1>
+    <span>inline1 no margin, padding</span>
+    <span 
+        style="
+            margin-top: 20px;
+            padding-top: 10px;
+            margin-left: 10px;
+            padding-left: 10px;
+            background: yellow;
+        "
+    >
+        inline2 have margin, padding
+    </span>
+    <hr>
+    <span style="display: inline-block;">inline-block1 no margin, padding</span>
+    <span 
+        style="
+            display: inline-block;
+            margin-top: 20px;
+            padding-top: 10px;
+            margin-left: 10px;
+            padding-left: 10px;
+            background: yellow;
+        "
+    >
+        inline-block2 have margin, padding
+    </span>
+    <hr>
+    <span style="display: inline-block; float: left">inline-block1 float left no margin, padding</span>
+    <span 
+        style="
+            display: inline-block;
+            margin-top: 20px;
+            padding-top: 10px;
+            margin-left: 10px;
+            padding-left: 10px;
+            background: yellow;
+        "
+    >
+        inline-block2 have margin, padding
+    </span>
+</body>
+</html>

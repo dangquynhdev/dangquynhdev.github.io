@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>flex container</h1>
+    <p>
+        flex-wrap: wrap-reverse<br>
+        456<br>
+        123<br>
+    </p>
+    <p>
+        align-items __ căn chỉnh những items trên một dòng<br>
+        align-content __ căn chỉnh tất cả các dòng theo container
+    </p>
+    <p>
+        flex-flow __ shorthand cho flex-direction vs flex-wrap
+    </p>
+    <h1>flex items</h1>
+    <p>
+        order<br>
+        default: 0
+    </p>
+    <p>
+        flex-grow<br>
+        xác định lượng mà flex item sẽ phát triển dựa vào khoảng không gian còn lại<br>
+        default: 0
+    </p>
+    <p>
+        flex-shrink<br>
+        xác định lượng mà flex item sẽ co lại dựa vào khoảng không gian còn lại<br>
+        default: 1
+    </p>
+    <p>
+        flex-basic<br>
+        The flex-basis property specifies the initial length of a flex item.<br><br>
+
+        khi dùng flex-basic để cài đặt chiều rộng cho phần tử thì nếu trong phần tử con có một khối có with cố định mà lớn hơn flex-item =>  khỗi sẽ bị mở rộng theo kích thước khối con đó
+        thậm chí cả khi ta cài đặt max-with: 100% cho khối con đó<br>
+        giải pháp là tại flex-item ta đặt max-with bằng flex-basic lun
+    </p>
+    <p>
+        flex<br>
+        The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.
+    </p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Specificity</h1>
+    <p>
+        two or more CSS rules that point to the same element, the selector with the highest specificity value will "win"
+    </p>
+    <p>
+        !important<br>
+        inline: 1000<br>
+        id: 100<br>
+        class: 10<br>
+        tag, pseudo-element: 1<br>
+        The universal selector (*) and inherited values have a specificity of: 0<br>
+    </p>
+    <h1>!important</h1>
+    <p>
+        if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+    </p>
+    <p>
+        The only way to override an !important rule is to include another !important rule on a declaration with the same (or higher) specificity in the source code
+    </p>
+</body>
+</html>

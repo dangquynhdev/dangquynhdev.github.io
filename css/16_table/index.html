@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>border</h1>
+    <p>
+        table, th, td : border<br>
+        border-collapse<br>
+        border-spacing<br>
+        border-radius _ bị mất hiệu lực khi set border-collapse: collapse<br>
+    </p>
+
+    
+    <h1>alignment default</h1>
+    <p>
+        text-align (center for th, left for td)<br>
+        vertical-align (middle for both th, td)
+    </p>
+
+    <h1>table width height</h1>
+    <p>
+        The table above might seem small in some cases. 
+        If you need a table that should span the entire screen (full-width), add width: 100% to the &lt;table> element
+    </p>
+    <p>
+        chúng ta có thể set height cho table, th, td<br>
+        khi set height hoặc width cho table thì kích thước của th, td tự dàn trải để lấp đầy<br>
+        To set the height of a specific row, add the style to a table row element (tr)
+    </p>
+
+    <h1>caption</h1>
+    <p>
+        để set vị trí của caption:<br>
+        caption-side: bottom
+    </p>
+
+    <h1>responsive table</h1>
+    <p>
+        A responsive table will display a horizontal scroll bar if the screen is too small to display the full content
+        set overflow:auto tại thẻ bao của table, table: width 100%
+    </p>
+    <p> In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).</p>
+
+    <h1>
+        ví dụ về table colgroup
+    </h1>
+    <p>
+        The &lt;colgroup> element is used to style specific columns of a table.<br>
+        colgroup phải đặt sau thẻ caption  nếu có và trước tất cả các thẻ khác của table
+    </p>
+    <p>
+        visiblility: collapse có thể dùng kết hợp với colgroup để ẩn cột
+    </p>
+    <table class="table01">
+        <colgroup span="1">
+        <colgroup span="1" style="visibility: collapse;">
+        <colgroup span="1" style="background: red">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+</body>
+</html>

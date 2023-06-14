@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 1000px;
+            background-color: grey;
+        }
+        .container2 {
+            background: #000;
+            height: 1000px;
+        }
+        .sticky {
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            position: sticky;
+            top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>relative</h1>
+    <p>
+        positioned relative to its normal position<br>
+        Other content will not be adjusted to fit into any gap left by the element.
+    </p>
+    <h2>fixed</h2>
+    <p>
+        positioned relative to the viewport<br>
+        A fixed element does not leave a gap in the page where it would normally have been located.
+    </p>
+    <h1>absolute</h1>
+    <p>
+        relative to the nearest positioned ancestor (not static)
+    </p>
+    <h1>sticky</h1>
+    <p>
+        
+        A sticky element toggles between relative and fixed, depending on the scroll position<br>
+        t is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).<br>
+        nó lun nằm trong khối mà nó thuộc về, và nó vấn giữ không gian nó chiếm trong luồng
+    </p>
+    <div class="container">
+        <div class="sticky"></div>
+    </div>
+    <div class="container2"></div>
+</body>
+</html>

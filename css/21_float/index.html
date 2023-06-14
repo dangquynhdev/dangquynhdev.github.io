@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>intro</h1>
+    <p>
+        vị trí của phần tử bắt đầu tại row2 sẽ bặt đầu tại:<br>
+        x: nơi mà cột row 1 có chiều cao nhỏ nhất, và nó không được cao hơn các cột sau nó<br>
+        y: nơi mà bằng cột có chiều cao lớn nhất tính từ tọa độ x về sau để nó không đè các cột phía sau __ nếu y bằng hieght của row1 thì x sẽ bị thay đổi trượt về left hoặc right tùy thuộc giá trị float
+    </p>
+    <h1>clearfix hack</h1>
+    <p>
+        This image is floated to the right. It is also taller than the element containing it, so it overflows outside of its container:<br>
+        fix by set  ::after clear both hoặc container overflow auto (ko nên do nếu quản lý ko tốt sẽ xuất hiện scroll)
+    </p>
+    <p>
+        The columns inside a row are all floating to the left, and are therefore taken out of the flow of the page, and other elements will be placed as if the columns do not exist. 
+        To prevent this, we will add a style that clears the flow
+    </p>
+    <h1>equal Height</h1>
+    <p> 
+        muốn các float item (cột) có height bằng nhau thì có phương pháp là set height cứng<br>
+        set fixed height (đây là nhược điểm không linh hoạt nhiều khi nội dung có thể vượt ra ngoài khung)<br>
+        => chúng ta sẽ tiếp tục được học tới flexbox
+    </p>
+
+</body>
+</html>
