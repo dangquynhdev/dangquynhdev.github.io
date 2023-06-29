@@ -1,0 +1,30 @@
+/* variable */
+:root {
+    --red: red;
+    --grey: #e9e6e4;
+}
+/* reset */
+body {
+    padding: 0;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    vertical-align: top;
+}
+/* base */
+body, pre {
+    font-family: sans-serif;
+}
+body {
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* layout */
+.l-inner {
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto;
+}

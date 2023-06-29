@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>git commit</h1>
+    <p>
+        tùy chọn các tham số như tự động staging, cập nhật vào commit cuối
+    </p>
+    <p>
+        Lệnh git commit thực hiện lưu vào CSDL Git toàn bộ nội dung chứa trong index (vùng staging) <br>
+        và kèm theo nó là một đoạn text thông tin (log) mô tả sự thay đổi của của commit này so với commit trước. <br>
+        sau này bạn có thể xem lại lịch sử này bằng lệnh git log<br>
+        Sau khi commit con trỏ HEAD tự động dịch chuyển đến commit này (Trong nhánh hiện tại)<br>
+    </p>
+    <p>
+        Khi thực hiện commit nếu bạn nhận ra ngay có sự nhầm lẫn nào đó bạn có thể khôi phục lại trạng thái cũ bằng lệnh <strong>git reset</strong> trình bày ở phần sau.
+    </p>
+    <h1>sử dụng lệnh commit</h1>
+    <p>
+        git commit -m "Ghi chú về commit" __ tham số -m để kèm dòng thông tin về commit
+    </p>
+    <p>
+        git commit -a -m "Ghi chú về commit" __ Khi cho tham số -a thì nó tương đương thực hiện lệnh git add để đưa các file đang được giám sát có sự thay đổi vào staging rồi tự động chạy git commit
+    </p>
+    <p>
+        git commit --amend -m "Thông tin về commit" __ <br>
+        Nếu commit đã được tạo ra nhưng chưa thực hiện push lên remote (khi có làm việc với Remote Repo - nói ở các phần sau) thì bạn có thể tạo ra commit mới thay thế cho commit cuối cùng đó. <br>
+        Dùng trong trường hợp không muốn tạo ra nhiều commit trong lịch sử commit thì cho vào lệnh tham số --amend
+    </p>
+</body>
+</html>

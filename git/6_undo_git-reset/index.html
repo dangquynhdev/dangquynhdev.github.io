@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>git reset</h1>
+    <p>
+        git reset để undo, hủy commit cuối hoặc hủy đưa thay đổi vào vùng staging
+    </p>
+    <h1>hủy commit cuối</h1>
+    <p>
+        có thể hủy trong trường hợp commit đó chưa public (chưa đẩy lên Remote Repo bằng lệnh git push) <br>
+        hai trường hợp hủy<br>
+    </p>
+    <p>
+        trường hợp 1:<br>
+        git reset với tham số --soft<br>
+        git reset --soft HEAD~1<br>
+        Trường hợp này sẽ hủy commit cuối, con trỏ HEAD sẽ chuyển về commit cha. Đồng thời những thay đổi của commit cuối được chuyển vào vùng staging nhằm để có cơ hội commit lại hoặc sửa đổi
+    </p>
+    <p>
+        trường hợp 2:<br>
+        git reset với tham số --hard<br>
+        git reset --hard HEAD~1<br>
+        Khi dùng tham số --hard thì kết quả giống với dùng tham số --soft, chỉ có một khác biết là nội dung thay đổi của commit cuối không đưa đưa vào staging mà bị hủy luôn. Trường hợp này dùng khi bạn quyết định hủy hoàn toàn commit cuối
+    </p>
+    <h1>hủy git add</h1>
+    <p>
+        git reset<br>
+        Nếu bạn đã dùng lệnh git add để cập nhật thay đổi vào vùng staging, bạn có thể hủy thao tác này bằng cách thực hiện lệnh
+    </p>
+    <h1>Hủy đưa một file vào staging</h1>
+    <p>
+        git reset -- filename
+    </p>
+</body>
+</html>

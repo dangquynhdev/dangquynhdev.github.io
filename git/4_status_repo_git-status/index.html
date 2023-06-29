@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>git status</h1>
+    <p>
+        Sử dụng lệnh git để biết thông tin trạng thái sửa đổi, thêm mới, xóa các file trước khi thực hiện commit<br>
+    </p>
+    <p>
+        Lệnh git status hiện thị thông tin khác nhau (do thêm mới, xóa đi, sửa đổi các file) giữa các file trong các trường hợp:<br>
+        Khác nhau giữa các file trong vùng staging (chỉ mục) và commit tại con trỏ HEAD (Thường HEAD ở vị trí commit cuối): -> thông tin này bạn có thể thực hiện lệnh commit để lưu staging vào dữ liệu Git<br>
+        Khác nhau giữa các file trong thư mục làm việc và trong staging -> bạn có thể chạy git add rồi commit<br>
+        Khác nhau giữa thư mục làm việc và những file chưa được giám sát bởi Git ->  bạn có thể chạy git add rồi commit<br>
+    </p>
+    <h1>git status -s</h1>
+    <p> muốn hiện thị thông tin ngắn gọn hơn thì cho thêm tham số -s</p>
+    <p>
+        ' ' = unmodified (không đổi)<br>
+        M = modified (có sửa đổi)<br>
+        A = added (file mới thêm)<br>
+        D = deleted (file bị xóa)<br>
+        R = renamed (đổi tên file)<br>
+        C = copied (file copy từ file khác)<br>
+        U = updated but unmerged (đã cập nhật, nhưng chưa merge)
+    </p>
+</body>
+</html>

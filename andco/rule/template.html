@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <style>
+        table {
+            table-layout: fixed;
+            width: 100%;
+        }
+        td {
+            border: 2px solid var(--grey);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+<pre>
+Hi Duyên-san Quỳnh-san
+コーディングテンプレートを新たに作成しgitへ招待しました。
+不明点や変更したほうが良いところなどあれば連絡してください。
+
+■gitディレクトリ構造
+----------------------
+template-wp
+template-mt
+template-teaser__hospital
+----------------------
+
+template-wp：cmsのwordpress時の時に使用するテンプレートです。
+template-mt：cmsのMovableType時の時に使用するテンプレートです。
+template-teaser__hospital：クリニックのteaserサイトで使用するテンプレートです。
+
+基本的に使用していただくテンプレートはtemplate-wp、template-mtになります。
+プロジェクト開始時にどのテンプレートで作成していただくかご連絡します。
+
+
+■テンプレートの変更箇所
+
+・画像フォーマットの変更
+画像フォーマットの基本をwebpにしています。gulpでjpg、pngをコンパイルするので書き出しはいままで通りjpg、pngで大丈夫です。
+webp非対応ブラウザでも画像を表示する必要があるのでpictureタグを使用してください。
+
+メディア、webp対応した記述の例です。
+&lt;picture>
+　　&lt;source srcset="<%= getRelativePath('/assets/images/'); %>" media="(max-width:767px)" type="image/webp">
+　　&lt;source srcset="<%= getRelativePath('/assets/images/'); %>" media="(max-width:767px)">
+　　&lt;source srcset="<%= getRelativePath('/assets/images/'); %>" type="image/webp">
+　　&lt;img src="<%= getRelativePath('/assets/images/index/'); %>" alt="">
+&lt;/picture>
+
+※cms配下のページではいままで通り、jpg、pngをつかってください。
+webpのコンパイルが不要な場合はgulpfile.babel.jsの下記内容をコメントアウトしてください。
+.pipe(rename(function(path) {
+　　if (path.extname.toLowerCase() !== '.svg') {
+　　　　path.basename += path.extname;
+　　}
+}))
+.pipe(webp())
+.pipe(gulp.dest(paths.images.dist))
+
+※webp不使用の案件もありますので基本のフォーマットはプロジェクト開始時に連絡します。
+※wordpressとMovableTypeでcms管理の画像管理場所が違っているのでテンプレートをそれぞれ確認してください。
+
+
+・ディレクトリ構造の変更
+assetsディレクトリの追加
+案件に応じてimages、fonts、media、filesのディレクトリがassets配下に作成してください。
+imagesではcommon全ページ共通の素材を格納、その他はページ毎にディレクトリを作成してください。
+
+
+・editor-style.cssを作成
+cms管理部分に適応するcssをstyle.cssをは別で作成しています。
+@extendで既存の見出し関係（例：c-heading-h3）のスタイルを当てているので、
+@extendされている元のclass名は変えないようにしてください。
+
+追加でeditor.cssに追加が必要なパーツはこちらで追加するのでeditor.cssは触らなくて大丈夫です。
+
+
+・各ページのconfigにtype'cms'の追加
+type'cms'を追加することでeditor-style.cssが読み込まれるようになっています。
+cms管理のページでセットするオプションです。
+news/editor以外でセットが必要な場合はこちらから連絡します。
+ </pre>
+            </td>
+            <td>
+<pre>
+Hi Duyên-san Quỳnh-san
+I created a new coding template and invited it to git.
+Please contact me if you have any questions or would like to change anything.
+
+
+■ git directory structure
+----------------------
+<strong style="color: var(--red)">template-wp
+template-mt
+template-teaser__hospital
+</strong>
+Templates that you basically use are template-wp and template-mt.
+<strong style="color: var(--red)">We will let you know which template to use when the project starts.</strong>
+----------------------
+
+template-wp: This is the template to use when using cms wordpress.
+template-mt: Template to use when MovableType of cms.
+template-teaser__hospital: The template used for the clinic's teaser site.
+
+
+■ Changes to the template
+
+<strong style="color: var(--red)">・Change image format</strong>
+The basic image format is <strong style="color: var(--red)">.webp</strong> Gulp compiles jpg and png, so you can export jpg and png as before.
+Please use the <strong style="color: var(--red)">picture tag</strong> because it is necessary to display the image even in browsers that do not support webp.
+
+It is an example of description corresponding to media and webp.
+<strong>&lt;picture>
+    &lt;source srcset="<%= getRelativePath('/assets/images/'); %>" media="(max-width:767px)" type="image/webp">
+    &lt;source srcset="<%= getRelativePath('/assets/images/'); %>" media="(max-width:767px)">
+    &lt;source srcset="<%= getRelativePath('/assets/images/'); %>" type="image/webp">
+    &lt;img src="<%= getRelativePath('/assets/images/index/'); %>" alt="">
+&lt;/picture>
+</strong>
+<strong style="color: var(--red)">*For pages under cms, please use jpg and png as before.</strong>
+image inside page of cms management don't need convert to .webp
+<strong style="color: var(--red)">
+If webp compilation is unnecessary, please comment out the following contents of gulpfile.babel.js.
+</strong>
+.pipe(rename(function(path) {
+    　if (path.extname.toLowerCase() !== '.svg') {
+    　　path.basename += path.extname;
+    }
+}))
+.pipe(webp())
+.pipe(gulp.dest(paths.images.dist))
+
+<strong style="color: var(--red)">*Since there are also projects that do not use webp, we will inform you of the basic format at the start of the project.</strong>
+
+<strong style="color: var(--red)">* The image management location of cms management is different between wordpress and MovableType, so please check each template.</strong>
+<strong>page of MovableType cms: store image in src/2ndfolder/assets/img_oo.jpg
+page of Wordpress cms: store image in src/cms/wp-content/uploads/images/2ndfolder (news)
+</strong>
+
+・Change directory structure
+<strong style="color: var(--red)">Add assets directory</strong>
+Create the images, fonts, media, and files directories under assets according to the project.
+For images, store common materials for all pages, and for others, create a directory for each page.
+
+
+<strong style="color: var(--red)">・Create editor-style.css</strong>
+The css that adapts to the cms management part is created separately from style.css.
+Since @extend is applied to the existing heading relationship (eg c-heading-h3) style,
+Do not change the original class name that is @extended.
+
+Additional parts that need to be added to editor.css will be added here, so you don't have to touch editor.css.
+
+
+<strong style="color: var(--red)">・Add type 'cms' to config of each page</strong>
+By adding type 'cms', editor-style.css is loaded.
+It is an option to set on the cms administration page.
+<strong style="color: var(--red)">If you need a set other than news/editor, please contact us from here.</strong>
+</pre>
+            </td>
+        </tr>
+    </table>
+<br><br><br><br><br>
+<div class="l-inner">
+    <h1>Notes for page of wordpress cms</h1>
+<pre>
+do <strong>not use &lt;pciture></strong> tag, use &lt;img> tag
+do not use mutil image to reposive breakpoint => <strong>use a large image with object-fit property to fit PC, SP</strong>
+<strong>icon</strong> of button, link (component) use <strong>::after not use i</strong> or span tag
+<strong>page cms editor</strong> have to use class <strong>p-editor__</strong>
+</pre>
+</div>
+</body>
+</html>

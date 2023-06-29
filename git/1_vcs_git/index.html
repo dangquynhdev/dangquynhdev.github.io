@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>vcs</h1>
+    <p>
+        version control system
+    </p>
+    <h1>hệ thống vcs git</h1>
+    <p>
+        Git lưu dữ liệu dưới dạng một loạt "ảnh chụp" (snapshot) của một tập hợp các file, <br>
+        có nghĩa là mỗi khi bạn commit (lưu lại) thì Git tiến hành chụp lại hệ thống các file thời điểm đó và lưu giữ một tham chiếu đến ảnh chụp dó, <br>
+        nhớ rằng các file không có thay đổi thì Git sẽ không lưu lại file đó lần nữa mà chỉ có một liên kết đến file đã lưu ở lần trước.
+    </p>
+    <h1>Ba trạng thái với Git</h1>
+    <p>
+        committed có nghĩa là dữ liệu đã lưu trữ an toàn trong Database (local)<br>
+        modified có nghĩa là dữ liệu (file) có thay đổi nhưng chưa lưu trong Database (local)<br>
+        staged có nghĩa đánh dấu các file sửa đổi modified chuẩn bị được commit tiếp theo<br><br>
+
+        Các khái niệm trên dẫn tới Git tổ chức một dự án ra ba khu vực:<br>
+        1 Thư mục làm việc (Working tree) - Chứa bản sao phiên bản cụ thể của dự án<br>
+        2 Khu vực sắp xếp (staging) - là một file, nằm trong thư mục Git chứa thông tin sẽ commit<br>
+        3 Thư mục Git (Git directory) - nơi Git lưu Database các file Metadata
+    </p>
+    <h1>tóm tắt vài lệnh với git</h1>
+    <p>
+        # Kiểm tra phiên bản GIT<br>
+        git --version<br>
+        # Danh sách các thiết lập cấu hình<br>
+        git config --list<br>
+        # Thiết lập tên<br>
+        git config --global user.name "Tên của Bạn"<br>
+        # Thiết lập email<br>
+        git config --global user.email emailcuaban@domain.com
+    </p>
+</body>
+</html>

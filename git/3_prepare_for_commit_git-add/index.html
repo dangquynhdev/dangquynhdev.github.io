@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>git add</h1>
+    <p>
+        tạo snapshot, <br>
+        lưu thông tin thay đổi _ <strong>đánh chỉ mục (index)</strong> _ vào vùng staging để chuẩn bị cho lệnh commit
+    </p>
+    <p>
+        Khái niệm đánh chỉ mục ở trên có nghĩa là lưu lại ảnh chụp (snapshot) thông tin thay đổi của thư mục làm việc so với lần commit trước (hoặc so với snapshot chưa commit), snapshot lưu ở khu vực gọi là staging (sắp xếp, chuẩn bị)
+    </p>
+    <p>
+        Bạn có thể thực hiện lệnh git add nhiều lần để tạo tạo ra một snapshot cuối cùng trước khi thực hiện commit.
+    </p>
+    <h1>sử dụng git add</h1>
+   
+    <p>
+        Lệnh git add sẽ đưa file, thư mục vào staging - nếu file/thư mục chưa từng được giám sát bởi git nó sẽ bắt đầu giám sát và tạo snapshot là toàn bộ file/thư mục mới. Nếu đã từng giám sát - thì snapshot là nội dung thay đổi so với commit trước.
+    </p>
+    <p>git add file1 file2 dir1 dir2 ...</p>
+    <p>
+        git add --all<br>
+        # Hoặc<br>
+        git add -A<br>
+        # Hoặc add [thư mục hiện tại]<br>
+        git add .
+    </p>
+    <p>
+        Lệnh trên có loại trừ (không đưa vào staging) những file, thư mục liệt kê ra trong một file .gitignore sẽ nói ở phần sau
+    </p>
+</body>
+</html>
