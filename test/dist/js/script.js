@@ -226,7 +226,7 @@ $('.js-accordion').click(function () {
 
 // ページ外リンクで#の位置へ飛ぶ
 $(window).on('load', function() {
-	$('#a-greeting').html($('#a-greeting').html() + 'load outside  ready') 
+	$('.p-anchor').html($('.p-anchor').html() + 'load outside  ready') 
 	var $jsFirstviewAnimation = $('.js-firstview-animation');
 
 	if (location.hash && $(location.hash).length != 0) {
