@@ -225,26 +225,26 @@ $('.js-accordion').click(function () {
 
 
 // ページ外リンクで#の位置へ飛ぶ
-$(window).on('load', function() {
-	$('.p-anchor').html($('.p-anchor').html() + 'load outside  ready') 
-	var $jsFirstviewAnimation = $('.js-firstview-animation');
+// $(window).on('load', function() {
+// 	$('.p-anchor').html($('.p-anchor').html() + 'load outside  ready') 
+// 	var $jsFirstviewAnimation = $('.js-firstview-animation');
 
-	if (location.hash && $(location.hash).length != 0) {
-		var targetOffset = $(location.hash).offset().top  - $('.l-header').outerHeight() - 30;
-		setTimeout(function() {
-			$('body,html').stop().animate({
-				scrollTop: targetOffset
-			}, 200);
-		})
-	}
+// 	if (location.hash && $(location.hash).length != 0) {
+// 		var targetOffset = $(location.hash).offset().top  - $('.l-header').outerHeight() - 30;
+// 		setTimeout(function() {
+// 			$('body,html').stop().animate({
+// 				scrollTop: targetOffset
+// 			}, 200);
+// 		})
+// 	}
 
-	// first view
-	$jsFirstviewAnimation.each(function() {
-		let delayTime = '0s';
-		if ($(this).data('delay') != undefined) {
-			delayTime = $(this).data('delay')+'s';
-		}
-		$(this).css('transition-delay', delayTime)
-		$(this).addClass('is-active');
-	});
-})
+// 	// first view
+// 	$jsFirstviewAnimation.each(function() {
+// 		let delayTime = '0s';
+// 		if ($(this).data('delay') != undefined) {
+// 			delayTime = $(this).data('delay')+'s';
+// 		}
+// 		$(this).css('transition-delay', delayTime)
+// 		$(this).addClass('is-active');
+// 	});
+// })
