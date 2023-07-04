@@ -84,7 +84,7 @@ jQuery(function($) {
 //
 // scroll trigger
 //------------------------------------
-// animation();
+animation();
 
 
 //
