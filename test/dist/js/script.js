@@ -31,7 +31,15 @@ jQuery(function($) {
 		$headerHeight = $header.outerHeight();
 	}
 	headerHeight();
-
+	$(window).on("load", function() {
+		$('#a-greeting').html($('#a-greeting').html() + 'load inside ready') 
+	})
+	$(window).on("scroll", function() {
+		$('#a-greeting').html($('#a-greeting').html() + 'scroll inside ready') 
+	})
+	$(window).on("load scroll", function() {
+		$('#a-greeting').html($('#a-greeting').html() + 'load scroll inside ready') 
+	})
 	function animation() {
 		$(window).on("load scroll", function() {
 			var scrollTop = $(this).scrollTop();
@@ -70,13 +78,13 @@ jQuery(function($) {
 					$(this).addClass('is-active');
 				}
 			});
-		}).trigger('scroll');
+		})
 	}
 	
 //
 // scroll trigger
 //------------------------------------
-animation();
+// animation();
 
 
 //
@@ -218,6 +226,7 @@ $('.js-accordion').click(function () {
 
 // ページ外リンクで#の位置へ飛ぶ
 $(window).on('load', function() {
+	$('#a-greeting').html($('#a-greeting').html() + 'load outside  ready') 
 	var $jsFirstviewAnimation = $('.js-firstview-animation');
 
 	if (location.hash && $(location.hash).length != 0) {
