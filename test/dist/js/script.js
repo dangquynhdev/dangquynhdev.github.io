@@ -32,13 +32,13 @@ jQuery(function($) {
 	}
 	headerHeight();
 	$(window).on("load", function() {
-		$('#a-greeting').html($('#a-greeting').html() + 'load inside ready') 
+		$('.p-anchor').html($('.p-anchor').html() + 'load inside ready') 
 	})
 	$(window).on("scroll", function() {
-		$('#a-greeting').html($('#a-greeting').html() + 'scroll inside ready') 
+		$('.p-anchor').html($('.p-anchor').html() + 'scroll inside ready') 
 	})
 	$(window).on("load scroll", function() {
-		$('#a-greeting').html($('#a-greeting').html() + 'load scroll inside ready') 
+		$('.p-anchor').html($('.p-anchor').html() + 'load scroll inside ready') 
 	})
 	function animation() {
 		$(window).on("load scroll", function() {
