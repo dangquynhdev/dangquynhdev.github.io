@@ -33,7 +33,6 @@ jQuery(function($) {
 	headerHeight();
 
 	function animation() {
-		alert('animation')
 		$(window).on("load scroll", function() {
 			var scrollTop = $(this).scrollTop();
 			var windowHeight = $(window).height();
@@ -71,7 +70,7 @@ jQuery(function($) {
 					$(this).addClass('is-active');
 				}
 			});
-		});
+		}).trigger('scroll');
 	}
 	
 //
