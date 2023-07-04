@@ -33,6 +33,7 @@ jQuery(function($) {
 	headerHeight();
 
 	function animation() {
+		console.log('animation')
 		$(window).on("load scroll", function() {
 			var scrollTop = $(this).scrollTop();
 			var windowHeight = $(window).height();
