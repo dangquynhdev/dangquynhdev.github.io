@@ -8,10 +8,68 @@ body {
     margin-right: 0;
 }
 /* BUTTON */
+.c-text-link01 {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+.c-text-link01::after {
+    content: "";
+    display: inline-block;
+    border-width: 6px 0 6px 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent red;
+    vertical-align: middle;
+    margin-left: 12px;
+}
+.c-text-link02 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+.c-text-link02::after {
+    content: "";
+    border-width: 6px 0 6px 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent red;
+}
+.p-scrolldown {
+    width: 1px;
+    height:  80px;
+    background: #000;
+    animation: scrolldown infinite 2s;
+}
+@keyframes scrolldown {
+    0% {
+        transform-origin: left top;
+        transform: scaleY(0);
+    } 20% {
+        transform-origin: left top;
+        transform: scaleY(1);
+    } 50% {
+        transform-origin: left top;
+        transform: scaleY(1);
+    } 50.1%{
+        transform-origin: left bottom;
+        transform: scaleY(1);
+    } 70% {
+        transform-origin: left bottom;
+        transform: scaleY(0);
+    } 100% {
+        transform-origin: left bottom;
+        transform: scaleY(0);
+    }
+}
 .u-icon-arrowthin {
     width: 45px;
     height: 6px;
-    background: url(assets/images/bg_more_arrow_gray.png) no-repeat center / contain;
+    background: url(images/bg_more_arrow_gray.png) no-repeat center / contain;
 }
 .u-icon-arrowbold {
     border-width: 8px 0 8px 15px;
@@ -133,7 +191,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     background-color: currentColor;
-    -webkit-mask-image: url(assets/images/icon_arrow_white.svg);
+    -webkit-mask-image: url(images/icon_arrow_white.svg);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
     -webkit-mask-position: center;
@@ -393,7 +451,7 @@ body {
     left: 0;
     bottom: 100%;
     width: 100%;
-    background: url(assets/images/bg-top.png) no-repeat left bottom / 100% auto;
+    background: url(images/bg-top.png) no-repeat left bottom / 100% auto;
     opacity: 0.25;
 }
 .p-column01__bar::after {
@@ -403,7 +461,7 @@ body {
     left: 0;
     top: 100%;
     width: 100%;
-    background: url(assets/images/bg-bottom.png) no-repeat left top / 100% auto;
+    background: url(images/bg-bottom.png) no-repeat left top / 100% auto;
     opacity: 0.25;
 }
 /* other way css for bar*/
@@ -721,3 +779,82 @@ body {
     left: 250px;
     right: 0;
 } */
+
+/*  */
+.p-nav01.--column2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.p-nav01__link {
+    position: relative;
+    padding-top: 65%;
+    overflow: hidden;
+}
+.p-nav01__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.p-nav01__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.p-nav01__content {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 475px;
+    max-height: 310px;
+}
+/* .p-nav01__content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: -1;
+    transition: all 0.6s;
+}
+
+.p-nav01__link:hover .p-nav01__content::after{
+    transform: scale(2);
+} */
+
+.p-nav01__link::before {
+    content: "";
+    width: 60%;
+    height: 60%;
+    max-width: 475px;
+    max-height: 310px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.8);
+    transition: all 0.6s;
+}
+.p-nav01__link:hover::before{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
