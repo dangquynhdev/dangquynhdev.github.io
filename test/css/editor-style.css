@@ -1,0 +1,483 @@
+@charset "UTF-8";
+/* ==================================================
+[Style]
+    1. setting
+	2. foundation
+	4. object
+
+================================================== */
+/* --------------------------------------------------
+	1. setting
+-------------------------------------------------- */
+/* mixins */
+/* functions */
+/* typography */
+/* media-query */
+/* variables */
+/* --------------------------------------------------
+	2. foundation
+-------------------------------------------------- */
+/* extend用にimport */
+.c-heading {
+  font-size: 3.125rem;
+  font-weight: 900;
+  display: inline-block;
+  position: relative;
+  color: #ffd900;
+  letter-spacing: 0.05em;
+  line-height: 1.75;
+  text-shadow: 0 -1px #231815, 0 1px #231815, 1px 0 #231815, -1px 0 #231815;
+  padding-bottom: 2px;
+}
+
+.c-heading::before, .c-heading::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+}
+
+.c-heading::before {
+  height: 2px;
+  background-color: #000;
+  left: -1px;
+  width: calc(50% - 8px);
+}
+
+.c-heading::after {
+  right: -1px;
+  width: calc(50% - 18px);
+  height: 26px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  -webkit-transform: skewX(-36deg);
+  transform: skewX(-36deg);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+
+.c-heading.--underline-white::before {
+  background-color: #ffff;
+}
+
+.c-heading.--underline-white::after {
+  border-color: #fff;
+}
+
+.c-heading.--no-underline {
+  display: block;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.c-heading.--no-underline::before, .c-heading.--no-underline::after {
+  display: none;
+}
+
+.c-heading-h3, .p-editor__content .p-editor__h3 {
+  font-size: 1.75rem;
+}
+
+.c-heading-h4, .p-editor__content .p-editor__h4 {
+  font-size: 1.5rem;
+}
+
+.c-heading-h5, .p-editor__content .p-editor__h5 {
+  font-size: 1.375rem;
+}
+
+.c-heading-h6, .p-editor__content .p-editor__h6 {
+  font-size: 1.125rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .c-heading {
+    font-size: 2.1875rem;
+  }
+  .c-heading::before {
+    width: calc(50% - 5px);
+    left: -2px;
+  }
+  .c-heading::after {
+    width: calc(50% - 7px);
+    height: 18px;
+    right: -4px;
+  }
+}
+
+.c-button, .p-editor__content .p-editor__button {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  min-height: 80px;
+  padding: 0 3.75rem;
+  border-radius: 999px;
+  background-color: #00b0ec;
+  border: 1px solid #00b0ec;
+  line-height: 1.2;
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  color: #fff;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.c-button::after, .p-editor__content .p-editor__button::after {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-color: transparent transparent transparent currentColor;
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.c-button.--blank::after, .p-editor__content .--blank.p-editor__button::after, .p-editor__content .p-editor__button:not([href$=".pdf"])[target="_blank"]::after {
+  content: "";
+  display: inline-block;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"><path fill="%2300b0ec" d="M0 25V7h7V0h18v18h-7v7zm3-3h12v-4H7v-8H3zm19-7V3H10v4h8v8zm-12 0h5v-5h-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 14px;
+  height: 14px;
+  background-size: contain;
+  margin-left: 0.375rem;
+  border: none;
+}
+
+.c-button.--pdf::after, .p-editor__content .--pdf.p-editor__button::after, .p-editor__content .p-editor__button[href$=".pdf"]::after {
+  content: "PDF";
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 48px;
+  height: 16px;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  margin-left: 0.375rem;
+  background-color: #ff3200;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  border: none;
+}
+
+@media all and (min-width: 1281px), print {
+  .c-button:hover, .p-editor__content .p-editor__button:hover {
+    color: #00b0ec;
+    background-color: #fff;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .c-button, .p-editor__content .p-editor__button {
+    max-width: 335px;
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+  .c-button::after, .p-editor__content .p-editor__button::after {
+    border-width: 5px 0 5px 8px;
+    right: 30px;
+  }
+  .c-button.--pdf::after, .p-editor__content .--pdf.p-editor__button::after, .p-editor__content .p-editor__button[href$=".pdf"]::after {
+    right: 22px;
+  }
+}
+
+.c-text-link, .p-editor__content .p-editor__text-link {
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  color: #0c7cad;
+  text-decoration: underline;
+}
+
+.c-text-link.--blank::after, .p-editor__content .--blank.p-editor__text-link::after, .p-editor__content .p-editor__text-link:not([href$=".pdf"])[target="_blank"]::after {
+  content: "";
+  display: inline-block;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"><path fill="%2300b0ec" d="M0 25V7h7V0h18v18h-7v7zm3-3h12v-4H7v-8H3zm19-7V3H10v4h8v8zm-12 0h5v-5h-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 14px;
+  height: 14px;
+  background-size: contain;
+  margin-left: 0.375rem;
+}
+
+.c-text-link.--pdf::after, .p-editor__content .--pdf.p-editor__text-link::after, .p-editor__content .p-editor__text-link[href$=".pdf"]::after {
+  content: "PDF";
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40px;
+  height: 20px;
+  font-size: 0.75rem;
+  margin-left: 0.375rem;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.c-list-dot, .p-editor__content .p-editor__ul {
+  padding-left: 1.25rem;
+}
+
+.c-list-dot__item, .p-editor__content .p-editor__ul li {
+  position: relative;
+  color: #333;
+}
+
+.c-list-dot__item::before, .p-editor__content .p-editor__ul li::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  left: -1rem;
+  top: 0.75em;
+  background: #ae9373;
+}
+
+.c-list-dot__item + .c-list-dot__item, .p-editor__content .p-editor__ul li + .c-list-dot__item, .p-editor__content .p-editor__ul .c-list-dot__item + li, .p-editor__content .p-editor__ul li + li {
+  margin-top: 0.5rem;
+}
+
+.c-list-ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+}
+
+.c-list-dl__dt {
+  font-weight: bold;
+}
+
+.c-list-dl__dt + .c-list-dl {
+  margin-top: 0.75rem;
+}
+
+.c-list-dl__dd {
+  margin-left: 14px;
+}
+
+/* extend用ここまで */
+/* --------------------------------------------------
+	4. object
+-------------------------------------------------- */
+/* project */
+.p-editor__content {
+  margin: 2.5rem auto 0;
+  overflow: hidden;
+}
+
+.p-editor__content .p-editor__h3 {
+  /* template html */
+  /* <h3 class="p-editor__h3">見出し3</h3> */
+}
+
+.p-editor__content .p-editor__h4 {
+  /* template html */
+  /* <h4 class="p-editor__h4">見出し4</h4> */
+}
+
+.p-editor__content .p-editor__h5 {
+  /* template html */
+  /* <h5 class="p-editor__h5">見出し5</h5> */
+}
+
+.p-editor__content .p-editor__h6 {
+  /* template html */
+  /* <h6 class="p-editor__h6">見出し6</h6> */
+}
+
+.p-editor__content .p-editor__button {
+  /* template html */
+  /* <a class="p-editor__button" href="">ボタン</a> */
+}
+
+.p-editor__content .p-editor__box {
+  background-color: #dcdcdc;
+  padding: 1.25rem;
+  /* template html */
+  /* <div class="p-editor__box">テキスト</div> */
+}
+
+.p-editor__content .p-editor__column-2 {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  /* template html */
+  /* <div class="p-editor__column-2"> */
+  /*     <div class="p-editor__column-col">2カラム</div> */
+  /*     <div class="p-editor__column-col">2カラム</div> */
+  /* </div> */
+}
+
+.p-editor__content .p-editor__column-3 {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  /* template html */
+  /* <div class="p-editor__column-3"> */
+  /*     <div class="p-editor__column-col">3カラム</div> */
+  /*     <div class="p-editor__column-col">3カラム</div> */
+  /*     <div class="p-editor__column-col">3カラム</div> */
+  /* </div> */
+}
+
+.p-editor__content .p-editor__column-col {
+  /* background-color: #f1fbff; */
+  /* このスタイルはエディターのみで使用できるようにしてください。 */
+}
+
+.p-editor__content .p-editor__ul {
+  /* 番号無しリスト */
+  list-style: none;
+}
+
+.p-editor__content .p-editor__ol {
+  /* 番号付きリスト */
+  padding-left: 1.25rem;
+  list-style: decimal;
+}
+
+.p-editor__content .p-editor__text-link {
+  /* リンクの挿入 */
+}
+
+.p-editor__content .p-editor__table {
+  /* テーブル */
+  border-collapse: collapse;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  max-width: 100%;
+}
+
+.p-editor__content .p-editor__table th,
+.p-editor__content .p-editor__table td {
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  padding: 0.5em;
+}
+
+.p-editor__content .p-editor__table th {
+  font-weight: bold;
+}
+
+.p-editor__content .p-editor__table.aligncenter {
+  margin: 0 auto;
+}
+
+.p-editor__content .p-editor__table.alignright {
+  float: right;
+}
+
+.p-editor__content .p-editor__table.alignleft {
+  float: left;
+}
+
+.p-editor__content p {
+  min-height: 1.75em;
+}
+
+.p-editor__content strong {
+  font-weight: bold;
+}
+
+.p-editor__content em {
+  font-style: italic;
+}
+
+.p-editor__content img {
+  height: auto !important;
+}
+
+.p-editor__content img.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.p-editor__content img.alignright {
+  float: right;
+}
+
+.p-editor__content img.alignleft {
+  float: left;
+}
+
+.p-editor__content blockquote {
+  position: relative;
+  background-color: #eeeeee;
+  padding: 1.5em 1.5em 1em;
+  margin: 1em auto;
+}
+
+.p-editor__content blockquote::before {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  content: "“";
+  font-size: 2rem;
+  color: #cfcfcf;
+  line-height: 1;
+}
+
+.p-editor__content dl > dt {
+  font-weight: bold;
+}
+
+.p-editor__content dl > dd {
+  margin-left: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+  .p-editor__content .p-editor__column-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .p-editor__content .p-editor__column-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .p-editor__content .p-editor__table {
+    width: 100% !important;
+  }
+}
