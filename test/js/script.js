@@ -106,6 +106,9 @@ $('.js-plus-minus').click(function(){
 	$(window).on("load", function() {
 		alert('load')
 	})
+	$(window).on("scroll", function() {
+		alert('scroll')
+	})
 //
 // scrolltop
 //------------------------------------
