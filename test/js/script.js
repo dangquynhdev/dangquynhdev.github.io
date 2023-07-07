@@ -103,6 +103,9 @@ $('.js-plus-minus').click(function(){
 		}
 	});
 
+	$(window).on("load", function() {
+		alert('load')
+	})
 //
 // scrolltop
 //------------------------------------
