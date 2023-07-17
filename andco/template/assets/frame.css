@@ -858,3 +858,79 @@ body {
     width: 100%;
     height: 100%;
 }
+
+/*  */
+.p-diagram__label {
+    min-height: 70px;
+    border-radius: 10px;
+    background-color: #f7f1a4;
+    color: #333;
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-diagram__arrow {
+    display: block;
+    width: 4px;
+    height: 50px;
+    border-radius: 100px;
+    position: relative;
+    color: #000;
+    background-color: currentColor;
+    margin: 15px auto;
+}
+.p-diagram__arrow::before, .p-diagram__arrow::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background-color: currentColor;
+    border-radius: 100px;
+    bottom: 0;
+    left: 0;
+}
+.p-diagram__arrow::before {
+    transform: rotate(-45deg) translate3d(0,0,0);
+    transform-origin: right bottom;
+}
+.p-diagram__arrow::after {
+    transform: rotate(45deg) translate3d(0,0,0);
+    transform-origin: left bottom;
+}
+.p-diagram__frame {
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    justify-content: space-between;
+}
+.p-diagram__frame-arrow {
+    transform: rotate(-90deg);
+    margin-top: 75px;
+    align-self: flex-start;
+}
+
+
+.p-box04 {
+    display: flex;
+    gap: 0 5%;
+    position: relative;
+}
+.p-box04__left {
+    width: 50%;
+    flex-shrink: 0;
+}
+.p-box04__left::after {
+    content: "";
+    position: absolute;
+    right: 47.5%;
+    top: 50%;
+    bottom: -5%;
+    background: #ccc;
+    width: 60vw;
+    z-index: -1;
+}
+.p-box04__text {
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+}
